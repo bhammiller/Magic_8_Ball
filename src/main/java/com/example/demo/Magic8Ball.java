@@ -3,7 +3,9 @@ package com.example.demo;
 public class Magic8Ball {
     public String magic8Ball(){
         Integer magic_number = 0;
-        String magic_response;
+        String magic_response ="";
+        System.out.println("What is your question");
+        String magic_question = "";
         switch(magic_number){
             case 1 : magic_response = "It is certain";
                 break;
@@ -46,5 +48,10 @@ public class Magic8Ball {
             case 20 : magic_response = "Very doubtful";
                 break;
         }
+        String repeat_question = "YOU ASKED: " + magic_question;
+        String magic_answer = "MAGIC 8-BALL SAYS: " + magic_response;
+        String next_question = "Do you have another question for the Magic 8-Ball (y/n)";
+        return repeat_question + "<br/>" + magic_answer + "<br/>" + next_question;
     }
+
 }
